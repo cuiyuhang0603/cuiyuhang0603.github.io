@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: yilia
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -110,3 +110,22 @@ backup:
   type: git
   repository:
     github: git@github.com:cuiyuhang0603/cuiyuhang0603.github.io.git,backup
+
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
