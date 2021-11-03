@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="概念 jdbc：java database connection        通过java程序来连接数据库        sun公司定义的通过java连接所有数据库的一组接口(标准)java驱动：不同数据库产品 底层的实现原理&#x2F;操作不同        不同数据库的产商 为自己的数据库提供的jdbc的实现类">
+  <meta name="description" content="JDBC 概念  12345jdbc：java database connection		通过java程序来连接数据库		sun公司定义的通过java连接所有数据库的一组接口(标准)java驱动：不同数据库产品 底层的实现原理&#x2F;操作不同		不同数据库的产商 为自己的数据库提供的jdbc的实现类	    使用步骤12345678910111213141516171819202122232425262">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JDBC">
-<meta property="og:url" content="http://example.com/2021/10/30/04-jdbc/index.html">
+<meta property="og:title" content="月曜日的丰满">
+<meta property="og:url" content="http://example.com/2021/11/01/04-jdbc/index.html">
 <meta property="og:site_name" content="月曜日的丰满">
-<meta property="og:description" content="概念 jdbc：java database connection        通过java程序来连接数据库        sun公司定义的通过java连接所有数据库的一组接口(标准)java驱动：不同数据库产品 底层的实现原理&#x2F;操作不同        不同数据库的产商 为自己的数据库提供的jdbc的实现类">
+<meta property="og:description" content="JDBC 概念  12345jdbc：java database connection		通过java程序来连接数据库		sun公司定义的通过java连接所有数据库的一组接口(标准)java驱动：不同数据库产品 底层的实现原理&#x2F;操作不同		不同数据库的产商 为自己的数据库提供的jdbc的实现类	    使用步骤12345678910111213141516171819202122232425262">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-10-30T13:53:26.000Z">
-<meta property="article:modified_time" content="2021-11-01T11:56:40.011Z">
+<meta property="article:published_time" content="2021-11-01T08:35:09.982Z">
+<meta property="article:modified_time" content="2021-10-03T08:09:14.182Z">
 <meta property="article:author" content="方方">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/10/30/04-jdbc/">
+<link rel="canonical" href="http://example.com/2021/11/01/04-jdbc/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>JDBC | 月曜日的丰满</title>
+  <title> | 月曜日的丰满</title>
   
 
 
@@ -150,7 +150,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/30/04-jdbc/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/01/04-jdbc/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -163,7 +163,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          JDBC
+          
         </h1>
 
         <div class="post-meta">
@@ -173,14 +173,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-10-30 21:53:26" itemprop="dateCreated datePublished" datetime="2021-10-30T21:53:26+08:00">2021-10-30</time>
+              <time title="创建时间：2021-11-01 16:35:09" itemprop="dateCreated datePublished" datetime="2021-11-01T16:35:09+08:00">2021-11-01</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-01 19:56:40" itemprop="dateModified" datetime="2021-11-01T19:56:40+08:00">2021-11-01</time>
+                <time title="修改时间：2021-10-03 16:09:14" itemprop="dateModified" datetime="2021-10-03T16:09:14+08:00">2021-10-03</time>
               </span>
 
           
@@ -194,18 +194,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><blockquote>
-<p>jdbc：java database connection<br>        通过java程序来连接数据库<br>        sun公司定义的通过java连接所有数据库的一组接口(标准)<br>java驱动：不同数据库产品 底层的实现原理/操作不同<br>        不同数据库的产商 为自己的数据库提供的jdbc的实现类    </p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><ul>
-<li>通过java来链接数据库：jdbc</li>
+        <h1 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h1><ul>
+<li>概念</li>
 </ul>
-<blockquote>
-<p>1 导入驱动：把jdbc的实现类jar包导入到当前姓名中<br>把第三方jar包在web项目中引用<br>    把mysql-cnnertor-java-5.1.15-bin.jar<br>    复制到WebContent/WEB-INF/lib下<br>    选中jar:点击右键，选择build path<br>把第三方jar包在java项目中引用<br>    把mysql-connector-java-5.1.15-bin.jar复制项目名称下<br>    选中jar:点击右键：选择build path</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//2 准备四大参数（连接数据库的四大参数）</span></span><br><span class="line">	url=<span class="string">&quot;jdbc:mysql://localhost:3306/数据库名&quot;</span>;</span><br><span class="line">	userName=<span class="string">&quot;&quot;</span>;</span><br><span class="line">	password=<span class="string">&quot;&quot;</span>;</span><br><span class="line">	diverName=<span class="string">&quot;com.mysql.jdbc.cj.Driver&quot;</span>;</span><br><span class="line"><span class="comment">//3 注册驱动</span></span><br><span class="line">	Class.forName();</span><br><span class="line"><span class="comment">//4 获取连接</span></span><br><span class="line">	Connection con = </span><br><span class="line">    DriverManager.getConnection(url,uerNmae,password);</span><br><span class="line"><span class="comment">//5 准备sql语句</span></span><br><span class="line">	String sql=<span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="comment">//6 获取sql语句发送器对象：Statement</span></span><br><span class="line">	Statement st = con.createStatement();</span><br><span class="line"><span class="comment">//7 通过slq语句发送器对象executeXxx方法把sql语句发送给数据库 获取影响的行数</span></span><br><span class="line">	执行sql语句的方法分为两种，</span><br><span class="line">        <span class="number">1</span> 种为数据查询，从数据库中获取一定数目的记录</span><br><span class="line">        <span class="number">2</span> 种为更改查询，对数据库中的数据或表结构进行修改</span><br><span class="line">    <span class="comment">//对于情况1，使用 executeQuery() 方法执行;</span></span><br><span class="line">	ResultSet set = con.executeQuery();<span class="comment">//使用ResultSet存储结果集</span></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">		ResultSet:结果集</span></span><br><span class="line"><span class="comment">		方法：</span></span><br><span class="line"><span class="comment">		1 boolean next();	判断光标是否还有行可以遍历</span></span><br><span class="line"><span class="comment">		2 xxx getXxx(String columnName);根据列名获取值</span></span><br><span class="line"><span class="comment">		  xxx getXxx(int colunmIndex);	根据列索引获取值</span></span><br><span class="line"><span class="comment">		3 void close(); 关闭结果集</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	List&lt;Student&gt; list = <span class="keyword">new</span> ArrayList&lt;Student&gt;();</span><br><span class="line">	<span class="keyword">while</span>(set.next())&#123;</span><br><span class="line">        Student stu = <span class="keyword">new</span> Student();</span><br><span class="line">        stu.set属性名(set.get属性类型(<span class="string">&quot;列名&quot;</span>));</span><br><span class="line">        ...</span><br><span class="line">        list.add(stu);</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//对于情况2，使用 executeUpdate() 方法执行;</span></span><br><span class="line">	<span class="keyword">int</span> lines = st.executeUpdate(sql);</span><br><span class="line"></span><br><span class="line"><span class="comment">//8 关闭资源和链接</span></span><br><span class="line">	st.close();</span><br><span class="line">	con.close();</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">jdbc：java database connection</span><br><span class="line">		通过java程序来连接数据库</span><br><span class="line">		sun公司定义的通过java连接所有数据库的一组接口(标准)</span><br><span class="line">java驱动：不同数据库产品 底层的实现原理/操作不同</span><br><span class="line">		不同数据库的产商 为自己的数据库提供的jdbc的实现类	</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">- 通过java来链接数据库：jdbc</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">1 导入驱动：把jdbc的实现类jar包导入到当前姓名中</span></span><br><span class="line"><span class="comment">	把第三方jar包在web项目中引用</span></span><br><span class="line"><span class="comment">		把mysql-cnnertor-java-5.1.15-bin.jar</span></span><br><span class="line"><span class="comment">		复制到WebContent/WEB-INF/lib下</span></span><br><span class="line"><span class="comment">		选中jar:点击右键，选择build path</span></span><br><span class="line"><span class="comment">	把第三方jar包在java项目中引用</span></span><br><span class="line"><span class="comment">		把mysql-connector-java-5.1.15-bin.jar复制项目名称下</span></span><br><span class="line"><span class="comment">		选中jar:点击右键：选择build path</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">//2 准备四大参数（连接数据库的四大参数）</span></span><br><span class="line">	url=<span class="string">&quot;jdbc:mysql://localhost:3306/数据库名&quot;</span>;</span><br><span class="line">	userName=<span class="string">&quot;&quot;</span>;</span><br><span class="line">	password=<span class="string">&quot;&quot;</span>;</span><br><span class="line">	diverName=<span class="string">&quot;com.mysql.jdbc.cj.Driver&quot;</span>;</span><br><span class="line"><span class="comment">//3 注册驱动</span></span><br><span class="line">	Class.forName();</span><br><span class="line"><span class="comment">//4 获取连接</span></span><br><span class="line">	Connection con = </span><br><span class="line">    DriverManager.getConnection(url,uerNmae,password);</span><br><span class="line"><span class="comment">//5 准备sql语句</span></span><br><span class="line">	String sql=<span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="comment">//6 获取sql语句发送器对象：Statement</span></span><br><span class="line">	Statement st = con.createStatement();</span><br><span class="line"><span class="comment">//7 通过slq语句发送器对象executeXxx方法把sql语句发送给数据库 获取影响的行数</span></span><br><span class="line">	执行sql语句的方法分为两种，</span><br><span class="line">        <span class="number">1</span> 种为数据查询，从数据库中获取一定数目的记录</span><br><span class="line">        <span class="number">2</span> 种为更改查询，对数据库中的数据或表结构进行修改</span><br><span class="line">    <span class="comment">//对于情况1，使用 executeQuery() 方法执行;</span></span><br><span class="line">	ResultSet set = con.executeQuery();<span class="comment">//使用ResultSet存储结果集</span></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">		ResultSet:结果集</span></span><br><span class="line"><span class="comment">		方法：</span></span><br><span class="line"><span class="comment">		1 boolean next();	判断光标是否还有行可以遍历</span></span><br><span class="line"><span class="comment">		2 xxx getXxx(String columnName);根据列名获取值</span></span><br><span class="line"><span class="comment">		  xxx getXxx(int colunmIndex);	根据列索引获取值</span></span><br><span class="line"><span class="comment">		3 void close(); 关闭结果集</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	List&lt;Student&gt; list = <span class="keyword">new</span> ArrayList&lt;Student&gt;();</span><br><span class="line">	<span class="keyword">while</span>(set.next())&#123;</span><br><span class="line">        Student stu = <span class="keyword">new</span> Student();</span><br><span class="line">        stu.set属性名(set.get属性类型(<span class="string">&quot;列名&quot;</span>));</span><br><span class="line">        ...</span><br><span class="line">        list.add(stu);</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//对于情况2，使用 executeUpdate() 方法执行;</span></span><br><span class="line">	<span class="keyword">int</span> lines = st.executeUpdate(sql);</span><br><span class="line"></span><br><span class="line"><span class="comment">//8 关闭资源和链接</span></span><br><span class="line">	st.close();</span><br><span class="line">	con.close();</span><br></pre></td></tr></table></figure>
 
 
 
@@ -260,7 +256,10 @@
     <a href="/2021/10/30/hello-world/" rel="prev" title="Hello World">
       <i class="fa fa-chevron-left"></i> Hello World
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/11/03/03-%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -319,7 +318,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.1.</span> <span class="nav-text">使用步骤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jdbc%E5%AE%9E%E7%8E%B0crud"><span class="nav-number">2.</span> <span class="nav-text">jdbc实现crud</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BD%93%E7%B1%BB%EF%BC%9A%E6%A0%B9%E6%8D%AE%E8%A1%A8%E5%88%9B%E5%BB%BA"><span class="nav-number">2.1.</span> <span class="nav-text">创建实体类：根据表创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAjdbc%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="nav-number">2.2.</span> <span class="nav-text">创建jdbc工具类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%84%E5%A4%84%E7%90%86-%E9%A2%84%E7%BC%96%E8%AF%91"><span class="nav-number">3.</span> <span class="nav-text">预处理&#x2F;预编译</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#preparedstatement"><span class="nav-number">3.1.</span> <span class="nav-text">preparedstatement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87preparedstatement%E5%AE%9E%E7%8E%B0crud"><span class="nav-number">3.2.</span> <span class="nav-text">通过preparedstatement实现crud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#preparedstatement%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-number">3.3.</span> <span class="nav-text">preparedstatement的优点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="nav-number">4.</span> <span class="nav-text">连接池</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="nav-number">4.1.</span> <span class="nav-text">常见的数据库连接池</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c3p0%E4%BD%BF%E7%94%A8"><span class="nav-number">4.2.</span> <span class="nav-text">c3p0使用</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JDBC"><span class="nav-number">1.</span> <span class="nav-text">JDBC</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.1.</span> <span class="nav-text">使用步骤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jdbc%E5%AE%9E%E7%8E%B0crud"><span class="nav-number">2.</span> <span class="nav-text">jdbc实现crud</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BD%93%E7%B1%BB%EF%BC%9A%E6%A0%B9%E6%8D%AE%E8%A1%A8%E5%88%9B%E5%BB%BA"><span class="nav-number">2.1.</span> <span class="nav-text">创建实体类：根据表创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAjdbc%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="nav-number">2.2.</span> <span class="nav-text">创建jdbc工具类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%84%E5%A4%84%E7%90%86-%E9%A2%84%E7%BC%96%E8%AF%91"><span class="nav-number">3.</span> <span class="nav-text">预处理&#x2F;预编译</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#preparedstatement"><span class="nav-number">3.1.</span> <span class="nav-text">preparedstatement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%BF%87preparedstatement%E5%AE%9E%E7%8E%B0crud"><span class="nav-number">3.2.</span> <span class="nav-text">通过preparedstatement实现crud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#preparedstatement%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-number">3.3.</span> <span class="nav-text">preparedstatement的优点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="nav-number">4.</span> <span class="nav-text">连接池</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="nav-number">4.1.</span> <span class="nav-text">常见的数据库连接池</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c3p0%E4%BD%BF%E7%94%A8"><span class="nav-number">4.2.</span> <span class="nav-text">c3p0使用</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -333,7 +332,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
