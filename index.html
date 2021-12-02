@@ -170,7 +170,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-12-02 10:42:33 / 修改时间：11:00:45" itemprop="dateCreated datePublished" datetime="2021-12-02T10:42:33+08:00">2021-12-02</time>
+              <time title="创建时间：2021-12-02 10:42:33 / 修改时间：11:05:19" itemprop="dateCreated datePublished" datetime="2021-12-02T10:42:33+08:00">2021-12-02</time>
             </span>
 
           
@@ -184,10 +184,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h1><blockquote>
-<p>原文连接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/gui951753/article/details/104374621">https://blog.csdn.net/gui951753/article/details/104374621</a></p>
-</blockquote>
-<h1 id="概念描述"><a href="#概念描述" class="headerlink" title="概念描述"></a>概念描述</h1><ul>
+          <h1 id="概念描述"><a href="#概念描述" class="headerlink" title="概念描述"></a>概念描述</h1><ul>
 <li>回溯法。回溯法被称为是万能的解法，几乎所有问题都可以用回溯法去解题。其核心思想就是枚举每一种情况，然后进行比较，最终得到最优解。这个算法的时间复杂度一般在指数级别O(2^n)。</li>
 <li>动态规划。常用来求解可划分的问题。对于一个问题，它可以划分为由若干个子问题相互联系产生，那么就可以用动态规划来求解。</li>
 <li>贪心。每次求得局部最优解，将局部最优解累加起来就变成了全局最优解。</li>
@@ -196,53 +193,14 @@
 <blockquote>
 <p>以上三个算法的基本概念，网上有更多资料，这里就不详细展开了。接下来讲我在学习过程中遭遇的问题。在实际运用这些算法解题的时候，经常会看到一些很奇怪的名词，比如解空间、自顶向下解法、自底向上解法等等。那么这些词到底代表的是什么含义呢？接下来通过一些具体的例子和图来展示。</p>
 </blockquote>
-<h1 id="斐波那契数列问题"><a href="#斐波那契数列问题" class="headerlink" title="斐波那契数列问题"></a>斐波那契数列问题</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>斐波那契数列是通过”递归”定义的，通过这个递归关系式，我们可以知道斐波那契数列中任意一个位置的数值。给你一个数字n，你能求出它对应的数列值是多少嘛？</p>
-<p><img src="https://img-blog.csdnimg.cn/20200220144103468.png" alt="在这里插入图片描述"></p>
-<h2 id="回溯法"><a href="#回溯法" class="headerlink" title="回溯法"></a>回溯法</h2><p>如果要求F(n)，那么必须要知道F（n-1）和F（n-2）。其问题就变成了求F(n-1)和F（n-2）。<br>举个例子，当我们计算f（7）的时候，必须要知道f(5)和f(6)，而计算f(5)又必须要知道f(3)和f(4)，直到问题规模缩小至f(0)和f(1)的时候，我们才能够根据已有的条件得到答案，然后往上回推。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200220145021350.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d1aTk1MTc1Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<ul>
-<li><strong>那么这个过程，就叫做自顶向下的分析过程。</strong></li>
-<li><strong>分析过程形成的树状图就叫做解空间。</strong> 当我们从根节点扩展到叶子节点(<strong>叶子节点是有解的最小问题</strong>)的时候,就意味着我们从解空间找到了一个解。所以，只要构造好了解空间树，求解的过程就是<strong>从根节点遍历到叶子节点的过程</strong>。</li>
-<li><strong>整个分析阶段是不断把问题化解为子问题，直到子问题的规模有解的时候，再开始回推进行计算。</strong></li>
-<li>使用回溯法存在的最主要问题就是存在大量重复计算，当计算f(7)的时候，需要计算f(5)和f(6)。而当计算f(6)的时候，需要再次计算下f(5)。</li>
-</ul>
-<p>代码示意如下</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">def <span class="title">f</span><span class="params">(n)</span>:</span></span><br><span class="line"><span class="function">	<span class="keyword">if</span> n</span>==<span class="number">0</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">	<span class="keyword">if</span> n==<span class="number">1</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">	<span class="keyword">return</span> f(n-<span class="number">1</span>)+f(n-<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>使用回溯法解题的时候，习惯于把大问题分解，分解到问题规模可解的时候，再去解决问题。而动态规划则是从已知解出发，逐步推算到问题规模的程度。</p>
-<ul>
-<li>回溯法。大问题————&gt;分解为子问题————&gt;子问题的规则足够小(可解)————&gt;回推大问题。</li>
-<li>动态规划。已知有解的子问题————&gt;逐步推算到问题规模大小的大问题。</li>
-</ul>
-<p>对于斐波那契数列问题而言，还拿f(7)举例，其过程如下：</p>
-<ul>
-<li>已知解f(1)和f(2)。推算得到f(3)。</li>
-<li>f(3)+f(2)————》f(4)</li>
-<li>f(4)+f(3)————》f(5)</li>
-<li>f(5)+f(4)————》f(6)</li>
-<li>f(6)+f(5)————》f(7)</li>
-</ul>
-<p>通过分析这个过程可以知道，动态规划的出发点是叶子节点，通过公式，逐步的从叶子结点上推到根节点。其核心思想就是<strong>通过已知解，来求解未知解。直到求解到的问题规模符合题目要求的规模</strong></p>
-<img src="https://img-blog.csdnimg.cn/20200220150037999.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d1aTk1MTc1Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" style="zoom: 80%;" />
-
-<p><strong>代码实现如下：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">def <span class="title">f</span><span class="params">(n)</span>:</span></span><br><span class="line"><span class="function">	<span class="comment">// 定义一个长度为n+1的数组，用来存储和记录已经计算过的值</span></span></span><br><span class="line"><span class="function">	a</span>=[<span class="number">0</span>]*(n+<span class="number">1</span>)</span><br><span class="line">	<span class="comment">// 初始化已知解</span></span><br><span class="line">	a[<span class="number">0</span>]=<span class="number">0</span>,a[<span class="number">1</span>]=<span class="number">1</span></span><br><span class="line">	<span class="comment">// 利用公式进行递推，不断推导未知解，直到求出自己想要的未知解，停止。</span></span><br><span class="line">	<span class="function"><span class="keyword">for</span> i in <span class="title">range</span><span class="params">(<span class="number">2</span>,n+<span class="number">1</span>)</span>:</span></span><br><span class="line"><span class="function">		a[i]</span>=a[i-<span class="number">1</span>]+a[i-<span class="number">2</span>]</span><br><span class="line">	<span class="keyword">return</span> a[n]</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>上文主要描述了解题的时候，回溯法和动态规划之间的区别。主要有以下几点。</p>
-<ul>
-<li>回溯法。要实现回溯法解题，那么就要将问题规模进行切分，直到将问题切分到可解的时候再进行计算。<ul>
-<li>时间复杂度O(2^n)。一般为指数级别，存在大量的重复计算，已经计算过的结果无法得到有效重用。</li>
-</ul>
-</li>
-<li>动态规划。从已知解推导问题，将问题推导到要求的未知解的规模即可。<ul>
-<li>时间复杂度一般为遍历数组的复杂度。没有重复计算，会使用数组记录到之前已经计算出来的值。</li>
-</ul>
-</li>
-<li>如果遇到某些问题，问题分多个阶段，且当前阶段的结果会影响到后续的结果，那么这个问题就可以用回溯或者动态规划来求解。</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/12/02/%E5%9B%9E%E6%BA%AF%E3%80%81%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E3%80%81%E8%B4%AA%E5%BF%83/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
